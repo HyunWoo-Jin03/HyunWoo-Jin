@@ -36,6 +36,27 @@
                 <img src="캠핑 예약 신청서.PNG" alt="이미지가 존재하지 않습니다.">
             </article>
 
+            <article class="blog-post">
+                <h2>홈페이지 접속 시간</h2>
+                <hr/>
+                <div id="time">로딩 중...</div>
+                <script>
+                function updateTime() {
+                    const now = new Date();
+                    const formatted = now.toLocaleString("ko-KR", {
+                        year: "numeric",
+                        month: "2-digit",
+                        day: "2-digit",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                        second: "2-digit"
+                    });
+                    document.getElementById("time").textContent = formatted;
+                    }
+                    updateTime();
+                    setInterval(updateTime, 1000);
+                    </script>
+            </article>
         </main>
     </div>
 </body>
